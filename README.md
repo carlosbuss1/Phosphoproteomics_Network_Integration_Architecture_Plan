@@ -1,41 +1,19 @@
-### Phosphoproteomics Network Integration Architecture Plan
+### Phosphoproteomics Network Integration Strategy
 
-## Step 4: Enhance with Plugins
+**Step 1: Data Preparation**
+- Collect phosphoproteomics data for Tyrosine, Serine, and Threonine.
+- Perform KEGG pathway enrichment for each modification type.
 
-### ClueGO (Pathway Enrichment in Networks)
-- **Input:** GO, KEGG, and Reactome results.
-- **Process:** Load data into ClueGO and perform pathway enrichment.
-- **Output:** Functional network with grouped annotations and p-values.
+**Step 2: Network Construction**
+- Use ClueGO to create functional networks based on KEGG results.
+- Load data into OmicsIntegrator for pathway fusion analysis focusing on Cancer and Insulin Resistance.
 
-### OmicsIntegrator (Data Fusion from Multiple Sources)
-- **Input:** Phosphoproteomics, transcriptomics, and proteomics datasets.
-- **Process:** Use the prize-collecting Steiner tree algorithm to fuse datasets.
-- **Output:** Multi-omics data fusion network.
+**Step 3: Network Analysis**
+- Apply centrality metrics (degree, betweenness) to identify hub proteins.
+- Perform community detection with Markov Clustering (MCL).
 
----
-
-## Step 5: Network Analysis and Interpretation
-
-### Centrality Metrics
-- **Input:** Functional network.
-- **Process:** Calculate degree centrality and betweenness centrality.
-- **Output:** Identification of hub proteins with key regulatory roles.
-
-### Community Detection
-- **Input:** Functional network.
-- **Process:** Apply Markov Clustering Algorithm (MCL) to identify groups of co-modified proteins.
-- **Output:** Detection of protein clusters based on shared phosphorylation patterns.
-
-### Pathway Overlaps
-- **Input:** Functional network.
-- **Process:** Analyze pathways for overlap involving multiple phosphorylation types.
-- **Output:** Highlighted pathways with shared regulatory mechanisms.
-
----
-
-## Step 6: Export Results
-
-- **Export:** Generate the network as an image or interactive file.
-- **Save:** Export node and edge tables with metadata for downstream analysis.
-- **Documentation:** Record all analytical steps and settings for reproducibility.
+**Step 4: Result Export and Documentation**
+- Export networks as image and interactive files.
+- Save node and edge tables with metadata.
+- Document all steps for reproducibility.
 
